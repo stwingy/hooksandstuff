@@ -1,0 +1,19 @@
+.Ball{
+background-color:tomato;
+border-radius:50%;
+color:white;
+display:none;
+width:3em;
+height:2.25em;
+padding-top:.75em;
+text-align:center;
+margin-right:.5em;
+font-weight:bold;
+font-size:1.5em;
+}
+.vis{
+    display:inline-block;
+}
+.BonusBall{
+    background-color: yellow;
+}

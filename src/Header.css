@@ -1,0 +1,13 @@
+.header{
+    background-color: #263238;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+.header a{
+    display:block;
+    text-decoration: none;
+    padding:  .4rem;
+    background-color: aqua;
+    margin:.2rem;
+}

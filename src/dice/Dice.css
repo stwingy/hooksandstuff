@@ -1,0 +1,25 @@
+.Dice{
+display:flex;
+flex-flow: column nowrap;
+
+}
+
+.DiceContainer{
+display:flex;
+justify-content: center;
+align-content: center;
+}
+
+.Dice button{
+    align-self: center;
+    color:white;
+    background-color: black;
+    border:0px;
+    border-radius: 10px;
+    padding:1.5em;
+    margin-top: 3em;
+}
+.Dice button:hover{
+background-color:darkslateblue;
+cursor: pointer;
+}
