@@ -16,8 +16,11 @@ import Boxholder from './boxform/Boxholder'
 import ToDoApp from './todo/TodoApp'
 import Appy from './yahtze/Appy'
 import CardApp from './cards/CardApp'
+import DadApp from './dadjokes/DadApp'
+import Dogapp from './dog/Dogapp'
 import Header from "./Header"
 import './App.css';
+import VendingApp from './vendingmachine/VendingApp';
 
 function App() {
   return (
@@ -41,6 +44,9 @@ function App() {
   <Route path ="/todo" component = {ToDoApp}/>
   <Route path ="/yahtze" component ={Appy}/>
   <Route path = "/cards" component ={CardApp}/>
+  <Route path = "/dad" component ={DadApp}/>
+  <Route path ='/vending' component ={VendingApp}/>
+  <Route path ='/dog' component = {Dogapp}/>
   </Switch>
   
   </BrowserRouter>

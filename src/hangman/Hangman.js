@@ -112,16 +112,19 @@ function Hangman({maxWrong = 7}) {
 		console.log(check)
 		if(check){
 			return <div>
-				<h2>You Won</h2>
+				<h2 style={{borderBottom:"none"}}>You Won</h2>
 				<p>The answer was <em>"{word}"</em></p>
 				<button onClick ={()=>restart(randomWord())}>Restart</button>
 			</div>
 		}
         if(nWrong<maxWrong){
-            return <div>
-                <img src={images[nWrong]} style={{ width: '300px', height: '300px' }} alt ={`${nGuesses}`}/>
+            return <div className ="bholder">
+                <img src={images[nWrong]} style={{ width: '300px', height: '300px',marginLeft:"auto",marginRight:"auto",display:"block" }} alt ={`${nGuesses}`}/>
                 <h2>{right}</h2>
-			{generateButtons()}
+				<div>
+{generateButtons()}
+				</div>
+			
 			
             </div>
 		
@@ -129,22 +132,23 @@ function Hangman({maxWrong = 7}) {
             
         return(
             <>
-            <h2>{`You Lose! Should have been "${word}"`}</h2>
+            <h2 style={{borderBottom:"none"}}>{`You Lose! Should have been "${word}"`}</h2>
             <button onClick ={()=>restart(randomWord())}>Restart</button>
             </>
         )
         }
     }
 	return (
-		<div className="main">
+		<div className="mainH">
 			<div className="Hangman">
 				<h1>hangman</h1>
 				<p>{`You have had ${nGuesses} guesses`} </p>
 				<p>{`And have ${nWrong} wrong out of a possible ${maxWrong} `}</p>
 				
-				
 				<div className="btnHolder">{checkGameOver()}</div>
+				
 			</div>
+		
 		</div>
 	);
 }

@@ -1,4 +1,4 @@
-import React, { useReducer,useEffect } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import Todo from './Todo';
 import ToDoForm from './ToDoForm';
 import './ToDoList.css';
@@ -43,11 +43,9 @@ const reducer = (state, action) => {
 	}
 };
 function TodoList() {
-    const initialState = {todoList:JSON.parse(localStorage.getItem("state")) || []}
-    const [ state, dispatch ] = useReducer(reducer, initialState);
-    useEffect(()=>
-    localStorage.setItem('state',JSON.stringify(state.todoList)),[state.todoList]
-    )
+	const initialState = { todoList: JSON.parse(localStorage.getItem('state')) || [] };
+	const [ state, dispatch ] = useReducer(reducer, initialState);
+	useEffect(() => localStorage.setItem('state', JSON.stringify(state.todoList)), [ state.todoList ]);
 	function makeList() {
 		return state.todoList.map((td) => (
 			<Todo key={td.id} todo={td.todo} id={td.id} dispatch={dispatch} completed={td.completed} />
@@ -55,7 +53,7 @@ function TodoList() {
 	}
 	return (
 		<div className="ToDoList">
-			<h1>
+			<h1 className="TodoList-h1__under">
 				Todo List <span>useReducer & custom form hook</span>
 			</h1>
 			<ul>{makeList()}</ul>

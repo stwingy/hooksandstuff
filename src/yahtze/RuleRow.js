@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import './RuleRow.css'
 import myContext from './context'
 function RuleRow(props) {
-  const { state, setState,scoreReducer } = useContext(myContext);
+  const { state, setState } = useContext(myContext);
     const { id, name, doScore, description,score } = props;
     const disabled = state.disArray[id]
    

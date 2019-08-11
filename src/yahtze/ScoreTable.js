@@ -1,11 +1,11 @@
-import React,{useContext,useState} from 'react'
+import React,{useContext} from 'react'
 import myContext from './context'
-import {scoreR} from './reducers'
+
 import RuleRow from './RuleRow'
 import './ScoreTable.css'
 function ScoreTable() {
   
-    const { state, setState,scoreReducer } = useContext(myContext);
+    const { state,scoreReducer } = useContext(myContext);
     const a =state.diceArray
    
 //    function getTotalScore() {
@@ -78,7 +78,7 @@ function ScoreTable() {
                   name='Four of Kind'
                   id={7}
                   description="Sum all dice if 4 are the same"
-                  doScore={id => scoreReducer(a,{type:"FOUROFAKIND"},id)}
+                  doScore={id => scoreReducer(a,{type:"FOUROFKIND"},id)}
                 />
                 <RuleRow
                   name='Full House'
@@ -102,7 +102,7 @@ function ScoreTable() {
                   name='Yahtzee'
                   id={11}
                   description="50 points for yahtzee"
-                  doScore={id => scoreReducer(a,{type:"YAHTZEE"},id)}
+                  doScore={id => scoreReducer(a,{type:"YAHTZE"},id)}
                 />
                 <RuleRow
                   name='Chance'

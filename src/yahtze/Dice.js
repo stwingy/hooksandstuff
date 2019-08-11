@@ -3,7 +3,7 @@ import myContext from './context';
 import Die from './Die'
 import './Dice1.css'
 function Dice(props) {
-    const { state, setState } = useContext(myContext);
+    const { state } = useContext(myContext);
 
     return (
         <div className='Dice1'>

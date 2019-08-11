@@ -3,7 +3,7 @@ import myContext from './context';
 import './Die.css'
 
 function Die(props) {
-    const { state, setState,handleClick } = useContext(myContext);
+    const { handleClick } = useContext(myContext);
 
         const numberWords= ["one", "two", "three", "four", "five", "six"]
         

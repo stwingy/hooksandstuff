@@ -21,6 +21,9 @@ function Header() {
           <Link to ='/todo'>ToDo</Link>
           <Link to ="/yahtze">Yahtze</Link>
           <Link to ="/cards">Cards</Link>
+          <Link to ="/dad">Dad Jokes</Link>
+          <Link to ="/vending">Vending Machine nested routes</Link>
+          <Link to ="/dog">DOG</Link>
         </div>
     )
 }

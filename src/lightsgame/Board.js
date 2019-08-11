@@ -24,7 +24,7 @@ function makeBoard(rows,cols,chance){
 
 
 
-function Board({rows=5,cols=5,chance=.4}) {
+function Board({rows=5,cols=5,chance=.2}) {
 
     const [{sboard,shasWon},setState] = useReducer(reducer,{sboard:makeBoard(rows,cols,chance),shasWon:false})
 

@@ -46,16 +46,18 @@ return d.size === 5 && (!d.has(1) || !d.has(6)) ? 50:0
 		 else if (d.has(3) && d.has(4) && d.has(5) && (d.has(2) || d.has(6)))
 			{return 30}else return 0
     }else if(action.type==="FOUROFKIND"){
-if(c.includes(4)) {return sum}
+if(c.includes(4)||c.includes(5)) {return sum}
     }else if(action.type==="FULLHOUSE"){
 	   if (c.includes(2) && c.includes(3)) {return 25}else{return 0}
     }else if (action.type==="THREEOFAKIND"){
-if(c.includes(3)){ return sum}
+if(c.includes(3)||c.includes(4)||c.includes(5)){ return sum}
     }else if (action.type==="CHANCE"){
       return sum
     }else{
       return 0
     }
+		return 0
+		
 		
 		}
 export {scoreR,reducer}
